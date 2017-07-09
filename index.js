@@ -29,9 +29,10 @@ bot.onText(/\/weather (.+)/, function (msg, match) {
 
   if (data.length === 2) {
     let message = `The result from ${data[0] + ' '+ data[1] } is :\n`;
-
+    console.log('data length = 2')
     getWeather(data[0],data[1])
     .then(res => {
+
       let weather = res.weather[0];
       let main = res.main;
       let wind = res.wind;
@@ -45,6 +46,7 @@ bot.onText(/\/weather (.+)/, function (msg, match) {
         wind: ${wind.speed} speed ${wind.deg} deg
         clouds: ${cloud}
       `
+      console.log(result)
       bot.sendMessage(fromId, message+`${result}`);
     })
     .catch(err => {bot.sendMessage(fromId, message+`${err}`);  })
