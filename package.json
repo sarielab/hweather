@@ -1,0 +1,23 @@
+{
+  "name": "hweather",
+  "version": "1.0.0",
+  "description": "telegram bot to give weather information",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bot.js"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "weather"
+  ],
+  "author": "ppsari <poppymighty@gmail.com> (https://github.com/ppsari/)",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "dotenv": "^4.0.0",
+    "node-telegram-bot-api": "^0.27.1",
+    "openweather-apis": "^3.3.2"
+  }
+}
